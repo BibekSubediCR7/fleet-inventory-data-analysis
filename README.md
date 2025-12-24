@@ -1,23 +1,24 @@
 # 📊 Fleet Inventory Data Analysis (Excel)
 
 ## 🧑‍💼 Project Overview
-This project simulates the role of a **Junior Data Analyst** working in a local government office. The task involved importing, cleaning, and analyzing fleet inventory data received from another department. The objective was to prepare clean, structured data and generate meaningful insights using **Microsoft Excel**, primarily through **Pivot Tables**.
+This project simulates the responsibilities of a **Junior Data Analyst** in a local government office. The work was divided into two phases. In the first phase, raw fleet inventory data was imported from a CSV file and cleaned for accuracy and consistency. In the second phase, a separate fleet inventory dataset was imported from another CSV file, cleaned, and analyzed using **Pivot Tables** to generate summarized insights for reporting and dashboard preparation.
 
 ---
 
-## 📁 Dataset
-- **Format:** Excel (.xlsx)
+## 📁 Datasets
+- **Format:** CSV (raw) → Excel (.xlsx) after cleaning
 - **Source:** Internal departmental fleet inventory data (simulated scenario)
-- **Content:** Vehicle and equipment inventory information across multiple government departments
+- **Content:** Vehicle and equipment inventory details across government departments
 
 ---
 
-## 🧹 Part 1: Data Cleaning & Preparation
+## 🧹 Part 1: Data Cleaning & Preparation (Raw CSV)
 
-Before analysis, the raw dataset required extensive cleaning. The following steps were performed:
+The first dataset was provided in CSV format and required cleaning before any analysis could be performed.
 
-- Converted the original CSV file to **XLSX format**
-- Adjusted **column widths** for full data visibility
+### Tasks Performed
+- Converted the raw CSV file to **XLSX format**
+- Adjusted **column widths** for clear data visibility
 - Removed **empty rows** using Excel filters
 - Identified and removed **duplicate records**
 - Corrected **spelling errors** in text fields
@@ -25,16 +26,20 @@ Before analysis, the raw dataset required extensive cleaning. The following step
 - Reconstructed incorrectly imported **department names** using **Flash Fill**
 - Removed unnecessary columns after consolidation
 
-📄 Cleaned dataset:
 
 ---
 
-## 📈 Part 2: Data Analysis Using Pivot Tables
+## 📈 Part 2: Data Cleaning & Analysis Using Pivot Tables (Separate Dataset)
 
-After cleaning, the dataset was analyzed to summarize fleet inventory distribution.
+A second fleet inventory dataset was provided in CSV format. This dataset was cleaned and analyzed to summarize equipment distribution across departments.
 
-### 🔹 Table Formatting & Summary Statistics
-- Converted the dataset into an **Excel Table**
+### Data Preparation
+- Imported raw CSV file into Excel
+- Formatted the dataset as an **Excel Table**
+- Cleaned inconsistencies and formatting issues
+- Ensured numerical fields were correctly structured for analysis
+
+### Summary Statistics
 - Used **AutoSum** to calculate:
   - Sum  
   - Average  
@@ -42,32 +47,36 @@ After cleaning, the dataset was analyzed to summarize fleet inventory distributi
   - Maximum  
   - Count  
 
-### 🔹 Pivot Table Analysis
+### Pivot Table Analysis
 
-Three pivot tables were created to analyze the data from different perspectives:
+Three pivot tables were created to analyze the cleaned dataset:
 
 #### 1️⃣ Equipment Count by Department
 - **Rows:** Department  
 - **Values:** Sum of Equipment Count  
 - Sorted in **descending order**
 
-#### 2️⃣ Equipment Breakdown Within Departments
+#### 2️⃣ Equipment Class Breakdown Within Departments
 - **Rows:** Department → Equipment Class  
 - **Values:** Sum of Equipment Count  
 - Collapsed all fields except **Transportation**
 
-#### 3️⃣ Department Breakdown Within Equipment Types
+#### 3️⃣ Department Breakdown Within Equipment Classes
 - **Rows:** Equipment Class → Department  
 - **Values:** Sum of Equipment Count  
 - Collapsed all fields except **CUV**
 
-📊 Pivot table screenshots are stored in the `visuals/` folder.
+📊 Pivot table screenshots are available in the `visuals/` directory.
+
+---
+
 
 ---
 
 ## 🛠 Tools & Skills Used
 - Microsoft Excel
-- Data Cleaning & Preprocessing
+- CSV to Excel Data Conversion
+- Data Cleaning & Preparation
 - Pivot Tables
 - AutoSum & Table Formatting
 - Data Analysis & Interpretation
@@ -75,25 +84,28 @@ Three pivot tables were created to analyze the data from different perspectives:
 ---
 
 ## 📌 Key Learning Outcomes
-- Hands-on experience cleaning real-world messy data
-- Strong understanding of Pivot Tables for summarizing datasets
-- Ability to analyze and present inventory data clearly
-- Practical simulation of an entry-level data analyst role
+- Experience working with multiple raw datasets
+- Strong data cleaning and preparation skills
+- Practical use of Pivot Tables for inventory analysis
+- Realistic simulation of an entry-level data analyst workflow
 
 ---
 
 ## 📂 Repository Structure
+
 fleet-inventory-data-analysis/
 ├── data/
-│ ├── raw_fleet_inventory.xlsx
-│ └── cleaned_fleet_inventory.xlsx
+│ ├── part1_raw_fleet_inventory.csv
+│ ├── part1_cleaned_fleet_inventory.xlsx
+│ └── part2_raw_fleet_inventory.csv
 ├── analysis/
-│ └── fleet_inventory_analysis.xlsx
+│ └── part2_fleet_inventory_analysis.xlsx
 ├── visuals/
 │ ├── pivot_table_department.png
 │ ├── pivot_table_department_equipment.png
 │ └── pivot_table_equipment_department.png
 └── README.md
+---
 
 ## 👤 Author
 **Bibek Subedi**
